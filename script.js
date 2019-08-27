@@ -3,7 +3,6 @@ const btn = document.getElementById('btn');
 
 btn.addEventListener('click', generateTable);
 
-
 function generateTable() {
      
     let value = 20;
@@ -23,13 +22,17 @@ function generateTable() {
 
 }
 
-const cell = document.getElementsByClassName('cell');
+    // STRUGGLING WITH THIS NEXT BIT - MOUSEOVERS!
 
-cell.addEventListener('mouseover', EnterCell);
+document.addEventListener('mouseover', EnterCell);
 
-function EnterCell() {
+function EnterCell(hover) {
 
-    let cellStyle = document.getElementsByClassName('cell');
-    cellStyle.target.style.color = 'black';
+    const cell = document.getElementsByClassName('cell');
 
-} 
+    if(hover.target.classList.contains("cell")) {
+
+    cell.style.backgroundColor = "red";
+
+    }
+};
