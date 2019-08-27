@@ -1,8 +1,12 @@
 
-let value = 3;
+const btn = document.getElementById('btn');
 
-function generateTable(value){
+btn.addEventListener('click', generateTable);
+
+
+function generateTable() {
      
+    let value = 20;
     let container = document.querySelector('.container');
 
     for (let i = 0; i < value; i++){
@@ -18,3 +22,14 @@ function generateTable(value){
     }
 
 }
+
+const cell = document.getElementsByClassName('cell');
+
+cell.addEventListener('mouseover', EnterCell);
+
+function EnterCell() {
+
+    let cellStyle = document.getElementsByClassName('cell');
+    cellStyle.target.style.color = 'black';
+
+} 
