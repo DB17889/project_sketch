@@ -19,20 +19,14 @@ function generateTable() {
         }
     
     }
+    
+    container.addEventListener("mouseover", function(e) {
+
+        if(e.target.classList.contains('cell')){
+
+        e.target.style.backgroundColor = "red";}   
+        
+
+    })
 
 }
-
-    // STRUGGLING WITH THIS NEXT BIT - MOUSEOVERS!
-
-document.addEventListener('mouseover', EnterCell);
-
-function EnterCell(hover) {
-
-    const cell = document.getElementsByClassName('cell');
-
-    if(hover.target.classList.contains("cell")) {
-
-    cell.style.backgroundColor = "red";
-
-    }
-};
