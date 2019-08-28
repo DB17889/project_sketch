@@ -1,12 +1,12 @@
 
 const btn = document.getElementById('btn');
+const container = document.querySelector('.container');
 
 btn.addEventListener('click', generateTable);
 
 function generateTable() {
      
     let value = 20;
-    let container = document.querySelector('.container');
 
     for (let i = 0; i < value; i++){
         let row = document.createElement('div');
@@ -19,14 +19,13 @@ function generateTable() {
         }
     
     }
-    
-    container.addEventListener("mouseover", function(e) {
-
-        if(e.target.classList.contains('cell')){
-
-        e.target.style.backgroundColor = "red";}   
-        
-
-    })
 
 }
+    
+container.addEventListener("mouseover", function(e) {
+    if(e.target.classList.contains('cell')){
+        e.target.style.backgroundColor = "red";
+    }   
+})
+
+
