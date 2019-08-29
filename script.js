@@ -24,7 +24,7 @@ function generateTable(value) {
     }
 
     let containerWidth = value * 12;                    // move to start?
-    let containerHeight = (value + 1) * 11;             // move to start?
+    let containerHeight = value * 11;             // move to start?
     container.style.height = containerHeight + 'px';
     container.style.width = containerWidth + 'px';
     container.style.marginLeft = '100px'; // once getting values in for grid sizes, customise margins.
