@@ -1,7 +1,13 @@
+.bodyContainer {
+    text-align: center;
+}
+
 .container {
     margin-top: 50px;
     padding: 8px 3px 0 3px;
-   
+    min-width: 240px;
+    max-width: 600px;
+    display: inline-block;
 }
 
 .cell {
