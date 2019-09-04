@@ -1,6 +1,8 @@
 
 const container = document.querySelector('.container');
 const body = document.querySelector('body');
+const bodyContainer = document.querySelector('.bodyContainer');
+let buttonDiv = document.getElementById('buttons');
 
 document.addEventListener('click', buttonClick);
 document.addEventListener('click', resetClick);
@@ -15,8 +17,8 @@ function buttonClick(e) {
 
 function generateTable(value) {
 
-    let containerWidth = value * 12;                    // move to start?
-    let containerHeight = value * 11;             // move to start?
+    let containerWidth = value * 12;                    
+    let containerHeight = value * 11;             
 
     for (let i = 0; i < value; i++){
         let row = document.createElement('div');
@@ -34,7 +36,6 @@ function generateTable(value) {
     container.style.height = containerHeight + 'px';
     container.style.width = containerWidth + 'px';
 
-    let buttonDiv = document.getElementById('buttons');
     buttonDiv.parentNode.removeChild(buttonDiv);
 
     let resetDiv = document.createElement('div');
@@ -55,18 +56,15 @@ container.addEventListener("mouseover", function(e) {
     }   
 })
 
+
 function resetClick(e) {
     if (e.target.classList.contains('resetButton')) {
-        resetTable();
+        location.reload(true);
     }
 }
 
-function resetTable() {
-    let removeTable = document.getElementById('container');
-    let removeReset = document.getElementById('resetButton'); 
-    removeTable.parentNode.removeChild(removeTable);
-    removeReset.parentNode.removeChild(removeReset);
-    
-}
+
+
+
 
 
