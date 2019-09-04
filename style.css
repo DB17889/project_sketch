@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 .bodyContainer {
     text-align: center;
 }
@@ -19,4 +23,20 @@
 
 .row {
     margin: -8px 0 -8px 0;
+}
+
+.resetDiv {
+    margin-top: 20px;
+    min-width: 240px;
+    max-width: 600px;
+    display: inline-block;
+}
+
+.resetButton {
+    height: 30px;
+    width: 60px;
+    background-color: black;
+    border: silver 2px;
+    color: white;
+    font-size: 1em;
 }

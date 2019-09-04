@@ -1,7 +1,9 @@
 
 const container = document.querySelector('.container');
+const body = document.querySelector('body');
 
 document.addEventListener('click', buttonClick);
+document.addEventListener('click', resetClick);
 
 function buttonClick(e) {
     if (e.target.classList.contains('btn')) {
@@ -9,6 +11,7 @@ function buttonClick(e) {
         generateTable(value);
     }
 }
+
 
 function generateTable(value) {
 
@@ -30,14 +33,40 @@ function generateTable(value) {
     container.style.border = 'solid black 3px';
     container.style.height = containerHeight + 'px';
     container.style.width = containerWidth + 'px';
+
     let buttonDiv = document.getElementById('buttons');
     buttonDiv.parentNode.removeChild(buttonDiv);
+
+    let resetDiv = document.createElement('div');
+    resetDiv.className = 'resetDiv';
+    body.appendChild(resetDiv);
+
+    let resetButton = document.createElement('button');
+    resetButton.className = 'resetButton';
+    resetButton.id = 'resetButton';
+    resetButton.innerHTML = 'RESET';
+    resetDiv.appendChild(resetButton);
 }
-    
+ 
+
 container.addEventListener("mouseover", function(e) {
     if(e.target.classList.contains('cell')){
         e.target.style.backgroundColor = "red";
     }   
 })
+
+function resetClick(e) {
+    if (e.target.classList.contains('resetButton')) {
+        resetTable();
+    }
+}
+
+function resetTable() {
+    let removeTable = document.getElementById('container');
+    let removeReset = document.getElementById('resetButton'); 
+    removeTable.parentNode.removeChild(removeTable);
+    removeReset.parentNode.removeChild(removeReset);
+    
+}
 
 
