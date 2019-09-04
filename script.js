@@ -30,7 +30,8 @@ function generateTable(value) {
     container.style.border = 'solid black 3px';
     container.style.height = containerHeight + 'px';
     container.style.width = containerWidth + 'px';
-    
+    let buttonDiv = document.getElementById('buttons');
+    buttonDiv.parentNode.removeChild(buttonDiv);
 }
     
 container.addEventListener("mouseover", function(e) {
