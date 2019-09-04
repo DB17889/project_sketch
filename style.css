@@ -40,3 +40,9 @@ body {
     color: white;
     font-size: 1em;
 }
+
+.colorBtn {
+    height: 20px;
+    width: 10px;
+    border-radius: 10px;
+}
