@@ -85,7 +85,7 @@ function createElements() {
 }
 
 
-let selectedColor = 'black';
+let selectedColor = 'white';
 
 document.addEventListener('click', colorClick);
 
@@ -126,7 +126,7 @@ function colorClick(e) {
         default:
                 container.addEventListener("mouseover", function(e) {
                     if(e.target.classList.contains('cell')){
-                        e.target.style.backgroundColor = "black";
+                        e.target.style.backgroundColor = "white";
                     }   
                 })
     }
