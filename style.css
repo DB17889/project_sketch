@@ -42,12 +42,13 @@ body {
 
 .resetButton {
     height: 35px;
-    width: 120px;
+    width: 160px;
     background-color: silver;
     border-radius: 10px;
     border: black solid 3px;
     color: black;
     font-size: 1em;
+    margin: 0 5px 0 5px;
 }
 
 .colorBtn {
